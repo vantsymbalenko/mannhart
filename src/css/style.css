@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Gothic';
+    src: url('../fonts/GOTHIC.TTF');
+    font-weight: normal;
+}
+
+body{
+    background: url("../image/beton_1980x1080.png");
+    font-family: 'Gothic', sans-serif;
+    /*background-position: center top;*/
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/*** header ***/
+.header__logo {
+    margin-left: 155px;
+    margin-top:34px;
+    width: 634px;
+    height: 150px;
+}
+/*** end header ***/
+
+

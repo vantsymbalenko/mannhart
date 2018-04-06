@@ -1,0 +1,16 @@
+.main__grundriss-text{
+    /*margin-top: 100px;*/
+    /*margin-left: 58px;*/
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.main__grundriss-shit{
+    margin-top: 15px;
+    margin-left: 4px;
+    font-family: 'Gothic', sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}

@@ -1,0 +1,52 @@
+.main__option-area{
+    margin-left: 68px;
+    margin-top:-10px;
+}
+.main__header{
+    color: #ffffff;
+    font-weight: normal;
+    margin-bottom: 27px;
+}
+.main_header_theme_uppercase{
+    text-transform: uppercase;
+}
+.main__option{
+    margin-top: 14px;
+    text-decoration: none;
+    list-style: none;
+    vertical-align: middle;
+}
+
+.main__option-name{
+    vertical-align: top;
+    display: inline-block;
+    width: 199px;
+    font-family: 'Century Gothic',sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+.main__input{
+    width: 122px;
+    height: 26px;
+    border: 1px solid black;
+    background: rgba(255,255,255,0.75);
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 7px;
+    font-family: 'Century Gothic',sans-serif;
+    margin: 0 auto;
+}
+
+.main__additional-options{
+    margin-top:134px;
+    border: 1px solid black;
+}
+.main__additional-option{
+    margin-top: 27px;
+    text-decoration: none;
+    list-style: none;
+}
