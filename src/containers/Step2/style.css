@@ -4,33 +4,52 @@
 }
 
 main{
-    margin: 17px 155px;
+    margin: 15px 157px;
+    padding-top: 44px;
+    padding-left:56px;
+    padding-bottom: 56px;
     display: grid;
+    /*grid-column-gap: 65.5px;*/
     grid-template-areas:
-    "status-page status-page status-page status-page status-page"
-    "draw-area draw-area draw-area draw-area option-area";
+    "status-page status-page"
+    "draw-area option-area";
     background : rgba(239,139,45, 0.7);
+    width: 1662px;
+    min-width: auto;
+    max-height: 846px;
+    border: solid 1px #979797;
 }
-/*** status for page start***/
+
+
+/*** status for page, start***/
 .status-page{
     grid-area: status-page;
-    padding: 44px 57px 0 57px;
 }
 
 .status-page-header{
-    font-weight: 400;
     color: #ffffff;
     font-size: 36px;
     text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
 }
 
 .status-page-state{
     margin-top: 15px;
     margin-left: 4px;
-    font-family: 'Gothic', sans-serif;
-    color: #ffffff;
+    font-family: 'Century Gothic', sans-serif;
+    object-fit: contain;
     font-size: 24px;
     font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
 }
 /*** status for page end***/
 
@@ -38,7 +57,101 @@ main{
 /*** start draw area***/
 .draw-area{
     grid-area: draw-area;
+    padding-left: 37px;
+    /*border: 1px solid black;*/
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas:
+    "draw-area-side-a draw-area-side-a draw-area-side-a"
+    "draw-area-side-c draw-area-outer-area draw-area-side-d"
+    "draw-area-side-b draw-area-side-b draw-area-side-b";
+    width: 914px;
+    height: 682px;
+    align-content: center;
+    justify-content: center;
+}
+.draw-area-side-a{
+    grid-area: draw-area-side-a;
+}
+.draw-area-side-b{
+    grid-area: draw-area-side-b;
+    position : relative;
+}
+.draw-area-side-c{
+    grid-area: draw-area-side-c;
+}
+.draw-area-side-d{
+    grid-area: draw-area-side-d;
+}
+.draw-area-outer-area{
+    grid-area: draw-area-outer-area;
+    width: 689px;
+    height: 474px;
     border: 1px solid black;
+    background: rgba(255,255,255, 0.74);
+}
+.draw-area-side-c-text-wrapper{
+    transform: rotate(-90deg);
+    width: 168px;
+    margin-top: 200px;
+
+}
+.draw-area-side-d-text-wrapper{
+    transform: rotate(90deg);
+    width: 164px;
+    margin-top: 200px;
+}
+.draw-area__inside-area{
+    border: 1px solid black;
+    background: rgba(255,255,255, 0.74);
+    height: 100%;
+
+}
+.draw-area > div{
+    /*border: 1px solid black;*/
+}
+.draw-area__thickness{
+   position: absolute;
+    right: 173px;
+    width: 123px;
+    height: 38px;
+    top: 5px;
+    background-color: rgba(255,255,255,0.75);
+    border: solid 1px #000000;
+    text-align: center;
+    font-family: Century Gothic, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+.draw-area-side-header{
+    font-family: "Century Gothic", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+.draw-area__triangle{
+    display: block;
+    margin: 5px auto;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid #ffffff;
+}
+.draw-area__triangle_180{
+    transform: rotate(180deg);
 }
 /***end draw area ***/
 
@@ -46,23 +159,24 @@ main{
 .option-area{
     grid-area: option-area;
     display: grid;
+    width: 535px;
     grid-template-areas:
     "main-options"
-    "additional-options";
-    border: 1px solid black;
+    "additional-options"
+    "buttons-paginations";
 }
 
     /*** main options ***/
-.main-options{
-    width: 72%;
-    margin: 0 auto;
-    border: 1px solid black;
-}
 
 .main-options-header{
-    color: #ffffff;
-    font-family: 'Gothic', sans-serif;
+    font-family: Raleway, sans-serif;
+    font-size: 24px;
     font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
 }
 .main-options-header_style_uppercase{
     text-transform: uppercase;
@@ -71,24 +185,137 @@ main{
 
 .main-option {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 199px 1fr;
     grid-template-areas: "main-option-name  main-option-input";
     list-style: decimal;
-    margin-top: 32px;
+    margin-top: 12px;
+}
+
+.main-option__margin_custom{
+    margin-top: 28px;
 }
 
 .main-option-name{
     grid-area: main-option-name;
-    color: #ffffff;
     font-family: 'Century Gothic', sans-serif;
-    font-size: 23px;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
 }
 .main-option-input{
     grid-area: main-option-input;
+    width: 134px;
+    height: 42px;
+    background-color: rgba(255,255,255,0.75);
+    border: solid 1px #000000;
+    text-align: center;
+    font-family: Century Gothic, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+
 }
     /*** end main options***/
 
+    /*** start additional options***/
+.additional-option{
+    width: 469px;
+    display: grid;
+    grid-template-columns: 199px 1fr;
+    grid-template-areas: "additional-option-name  additional-option-input-wrapper";
+    margin-top: 12px;
+    align-content: center;
+    justify-content: center;
+}
+.additional-options-list{
+    list-style: none;
+}
+.additional-option-name{
+    grid-area: additional-option-name;
+    vertical-align: middle;
+    line-height: 36px;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 24px;
+    margin-right: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    /*line-height: normal;*/
+    letter-spacing: normal;
+    color: #ffffff;
 
+}
+.additional-option-input-wrapper{
+    grid-area: additional-option-input-wrapper;
+    text-align: right;
+
+}
+.additional-option__margin_custom{
+    margin-top: 142px;
+}
+.additional-option-input[type="checkbox"]{
+    width: 32px;
+    height: 32px;
+    color: #4a90e2;
+
+}
+select.additional-option-input{
+    width: 248px;
+    height: 44px;
+    font-family: Raleway, sans-serif;
+    border: 1px solid black;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+    /*** end additional options***/
+
+    /*** start buttons-paginations ***/
+.buttons-paginations{
+    margin-top: 32px;
+    display: block;
+    grid-column-gap: 20px;
+    grid-template-areas:
+    "button-paginations-prev button-paginations-next";
+}
+.button-paginations-next{
+    grid-area: button-paginations-next;
+}
+.button-paginations-prev{
+    grid-area: button-paginations-prev;
+}
+.button-paginations-default{
+    width: 200px;
+    height: 60px;
+    margin-right: 20px;
+    text-align: center;
+    font-family: CenturyGothic, sans-serif;
+    background: #EF8018;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+    /*** end buttons-paginations ***/
 /*** end option area ***/
 
 
