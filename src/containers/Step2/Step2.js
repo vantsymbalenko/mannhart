@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
+import imgSrcArrow from '../../image/arrow_h.png';
 
 export default class Step2 extends Component{
     render(){
@@ -29,7 +30,32 @@ export default class Step2 extends Component{
                         </div>
                     </div>
                     <div className="draw-area-outer-area" style = {{padding: "10px"}}>
-                        <div className="draw-area__inside-area"></div>
+                        <div className="draw-area__inside-area">
+                            <div className="draw-area__input-arrow_h">
+                                <div className="left-arrow">
+                                    <span/>
+                                </div>
+                                <div className="arrow-line">
+                                    <span/>
+                                    <input type="number"  className={"main-option-input"}/>
+                                </div>
+                                <div className="right-arrow">
+                                    <span/>
+                                </div>
+                            </div>
+                            <div className="draw-area__input-arrow_h draw-area__input-arrow_v">
+                                <div className="left-arrow">
+                                    <span/>
+                                </div>
+                                <div className="arrow-line">
+                                    <span/>
+                                    <input type="number"  className={"main-option-input"}/>
+                                </div>
+                                <div className="right-arrow">
+                                    <span/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="option-area">

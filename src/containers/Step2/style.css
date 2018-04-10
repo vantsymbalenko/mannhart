@@ -106,11 +106,73 @@ main{
     border: 1px solid black;
     background: rgba(255,255,255, 0.74);
     height: 100%;
+    position: relative;
 
 }
-.draw-area > div{
-    /*border: 1px solid black;*/
+    /***start arrow group ***/
+.draw-area__input-arrow_h {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /*margin: 150px auto;*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10px auto 10px;
 }
+
+.left-arrow > span{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid black;
+    margin-left:auto;
+    margin-right:0;
+}
+.arrow-line{
+    position: relative;
+}
+.arrow-line > span {
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 100%;
+    border: 1px solid black;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index:1
+}
+.arrow-line > input{
+    position: absolute;
+    /*width: 20px;*/
+    /*height: 10px;*/
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 10;
+    background: #ffffff;
+}
+.right-arrow > span{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid black;
+}
+.draw-area__input-arrow_v{
+    transform: rotate(90deg);
+    margin-left: -200px;
+}
+    /*** end arrow group  ***/
+
+
 .draw-area__thickness{
    position: absolute;
     right: 173px;
